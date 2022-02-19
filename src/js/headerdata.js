@@ -242,3 +242,17 @@ document.onclick = function(e) {
 		resForm.classList.remove('is_open')
 	}
 }
+
+// reponsive categories
+const rescatbtn = document.querySelector('.responsive-cat-button');
+const rescatMenu = document.querySelector('.responsive-cat-menu');
+
+rescatbtn.onclick = function() {
+	rescatMenu.classList.toggle('is_open');
+	const dicon = this.lastElementChild;
+	if(dicon.classList.contains('fa-angle-down')) {
+		dicon.classList.replace('fa-angle-down', 'fa-angle-up');
+	} else {
+		dicon.classList.replace('fa-angle-up', 'fa-angle-down');
+	}
+}

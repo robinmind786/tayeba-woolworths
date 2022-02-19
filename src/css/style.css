@@ -1037,6 +1037,11 @@ body {
     -webkit-overflow-scrolling: touch;
     z-index: 300;
     background: #fff;
+    display: none;
+}
+
+.responsive-cat-menu.is_open {
+    display: block;
 }
 
 .responsive-cat-menu .menu-items {
@@ -1110,6 +1115,9 @@ body {
     .cart-drawer {
         width: 100%;
         transform: translateX(100%);
+    }
+    .responsive-cat-menu {
+        width: 100%;
     }
 }
 
