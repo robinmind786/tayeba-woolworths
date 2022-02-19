@@ -998,8 +998,97 @@ body {
     margin-top: 18px;
 }
 
+/*responsive-cat*/
+.responsive-cat {
+    display: none;
+}
 
+.responsive-cat-button {
+    height: 50px;
+    width: 100%;
+    padding-left: 20px;
+    border: none;
+    background: #178841;
+    color: #fff;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
 
+.responsive-cat-button h3 {
+    font-size: 14px;
+    color: #fff;
+    display: inline;
+    margin-bottom: 0;
+}
+
+.responsive-cat-button  i {
+    font-size: 22px;
+}
+
+.responsive-cat-menu {
+    position: absolute;
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    max-height: calc(100vh - (150px + 80px));
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    z-index: 300;
+    background: #fff;
+}
+
+.responsive-cat-menu .menu-items {
+    box-shadow: 0 0 5px rgb(0 0 0 / 15%);
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    font-family: Fresh Sans Medium,Helvetica,Arial,sans-serif;
+}
+
+.categoriesNavigation-list {
+    margin-bottom: 0;
+}
+
+.categoriesNavigation-link {
+    border-top: none;
+    width: 100%;
+    display: flex;
+    min-height: 44px;
+    font-size: 14px;
+    padding: 5px 20px;
+    color: #178841;
+    align-items: center;
+    text-transform: capitalize;
+    font-weight: 600;
+}
+
+.categoriesNavigation-link:last-child {
+    border-bottom: 1px solid #dedfdc;
+}
+
+.categoriesNavigation-linkText {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.categoriesNavigation-linkText i {
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.categoriesNavigation-link.is_special {
+    background-color: #ffda00!important;
+    color: #3a474e;
+}
+
+.categoriesNavigation-link:hover {
+    background-color: #ddd;
+    text-decoration: none;
+}
 
 @media (max-width: 600px) {
     .responsive-searchbtn {
@@ -1022,12 +1111,16 @@ body {
         width: 100%;
         transform: translateX(100%);
     }
+}
 
-
+@media (max-width: 900px) {
+    .topnav-corporate {
+        display: none;
+    }
 }
 
 @media (max-width: 1024px) {
-    .topnav-corporate, .input-times, .tr-logo_img, .cat, .catalogue-list, .tr-desktop-login, .headerCheckout-orderHeader {
+    .input-times, .tr-logo_img, .cat-content, .catalogue-list, .tr-desktop-login, .headerCheckout-orderHeader {
         display: none!important;
     }
 
@@ -1037,6 +1130,9 @@ body {
 
     .coreHeader-offscreenToggle {
         display: flex;
+    }
+    .responsive-cat {
+        display: block;
     }
 }
 
