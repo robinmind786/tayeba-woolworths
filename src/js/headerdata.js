@@ -283,10 +283,18 @@ window.onclick = function(e) {
 
 }
 
-
 function closeSideNav() {
 	sidenav.classList.remove('is_open');
 	sideMasking.classList.remove('is_open');
 }
 
 
+// onscroll
+window.onscroll = function() {
+	const trHeader = document.querySelector('.tr-header');
+	if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+		trHeader.style.position = 'fixed';
+	} else {
+		trHeader.style.position = null;
+	}
+}

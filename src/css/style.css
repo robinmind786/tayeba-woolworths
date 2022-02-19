@@ -111,7 +111,6 @@ body {
 
 /*tr header*/
 .tr-header {
-    position: sticky;
     top: 0;
     left: 0;
     right: 0;
