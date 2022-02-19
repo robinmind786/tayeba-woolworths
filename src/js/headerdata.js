@@ -2,6 +2,8 @@
 const searchInp = document.getElementById('headerSearch');
 const searchbtn = document.querySelector('.searchbtn');
 const inputTime = document.querySelector('.input-times');
+const rescatMenu = document.querySelector('.responsive-cat-menu');
+
 
 
 if(searchInp.addEventListener) {
@@ -22,6 +24,7 @@ if(searchInp.addEventListener) {
 }
 function searchInpFun() {
 	const v = this.value;
+	closeSideNav();
 	if(v.length > 0) {
 		inputTime.style.display = 'block';
 	} else {
@@ -35,6 +38,7 @@ if(inputTime.addEventListener) {
 	inputTime.attachEvent('onclick', inputTimeFun);
 }
 function inputTimeFun() {
+	closeSideNav();
 	searchInp.value = '';
 	this.style.display = 'none';
 }
@@ -175,6 +179,8 @@ if(cartBtnMobiel.addEventListener) {
 	cartBtnMobiel.attachEvent('onclick', drawerFun);
 }
 function drawerFun() {
+	closeSideNav();
+	closerescatMenu();
 	cartDrawer.classList.add('is_open');
 	masking.classList.add('is_open');
 }
@@ -206,12 +212,6 @@ function orderSmFun() {
 	}
 }
 
-
-window.onclick = function(e) {
-	if(e.target == masking) {
-		hideOrderSmry()
-	}
-}
 
 
 function hideOrderSmry() {
@@ -245,7 +245,6 @@ document.onclick = function(e) {
 
 // reponsive categories
 const rescatbtn = document.querySelector('.responsive-cat-button');
-const rescatMenu = document.querySelector('.responsive-cat-menu');
 
 rescatbtn.onclick = function() {
 	rescatMenu.classList.toggle('is_open');
@@ -256,3 +255,38 @@ rescatbtn.onclick = function() {
 		dicon.classList.replace('fa-angle-up', 'fa-angle-down');
 	}
 }
+
+
+function closerescatMenu() {
+	rescatMenu.classList.remove('is_open');
+}
+
+
+// sidenav
+const sidenav = document.querySelector('.sidenav');
+const burger = document.querySelector('.coreHeader-offscreenToggle');
+const sideMasking = document.querySelector('.sidenav-masking');
+
+burger.onclick = function() {
+	sidenav.classList.toggle('is_open');
+	sideMasking.classList.toggle('is_open');
+}
+
+window.onclick = function(e) {
+	if(e.target.classList.contains('sidenav-masking')) {
+		closeSideNav();
+	}
+	if(e.target.classList.contains('masking')) {
+		hideOrderSmry();
+		closerescatMenu();
+	}
+
+}
+
+
+function closeSideNav() {
+	sidenav.classList.remove('is_open');
+	sideMasking.classList.remove('is_open');
+}
+
+
