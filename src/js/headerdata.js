@@ -233,4 +233,13 @@ const resForm = document.querySelector('.headerSearch-searchWrapper-mobiles');
 researchbtn.addEventListener('click', function() {
 	resForm.classList.toggle('is_open');
 	this.classList.toggle('is_open');
+	searchInp.value = '';
 });
+
+
+document.onclick = function(e) {
+	const xtar = e.target.id;
+	if(xtar !== 'headerSearch' && xtar !== 'searchbtnM' && xtar !== 'searcIcon') {
+		resForm.classList.remove('is_open')
+	}
+}
