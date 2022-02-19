@@ -975,7 +975,28 @@ body {
     color: #fff;
 }
 
+.headerSearch-searchWrapper-mobiles {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    display: none;
+}
 
+.headerSearch-searchWrapper-mobiles.is_open {
+    display: block;
+}
+
+.headerSearch-searchWrapper-mobiles .autocomplete input {
+    height: 56px;
+}
+
+.headerSearch-searchWrapper-mobiles .searchbtn {
+    height: 45px;
+    width: 45px;
+    margin-top: 18px;
+}
 
 
 
@@ -985,7 +1006,7 @@ body {
         display: block;
     }
     .header_search {
-        display: none;
+        /*display: none;*/
     }
     .tr-creator-profile {
         width: auto;

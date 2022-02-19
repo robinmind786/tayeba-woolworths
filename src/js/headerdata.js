@@ -221,3 +221,16 @@ function hideOrderSmry() {
 }
 
 // responsive
+if (window.matchMedia("(max-width: 600px)").matches) {
+	const formSearch = document.querySelector('.header_search');
+	const mobileSearch = document.getElementById('mobileSearch');
+	mobileSearch.appendChild(formSearch);
+}
+
+const researchbtn = document.querySelector('.responsive-searchbtn');
+const resForm = document.querySelector('.headerSearch-searchWrapper-mobiles');
+
+researchbtn.addEventListener('click', function() {
+	resForm.classList.toggle('is_open');
+	this.classList.toggle('is_open');
+});
