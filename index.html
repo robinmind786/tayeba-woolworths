@@ -23,6 +23,7 @@
   <link rel="stylesheet" type="text/css" href="src/css/fontawesome/css/font-awesome.min.css">
   <link rel="stylesheet" type="text/css" href="src/css/unit.css">
   <link rel="stylesheet" type="text/css" href="src/css/style.css">
+  <link rel="stylesheet" type="text/css" href="src/css/main.css">
   <link rel="stylesheet" type="text/css" href="src/css/responsive.css">
 </head>
 <body>
@@ -98,8 +99,8 @@
       <div class="container-xl">
         <div class="tr-header_content flex items-center">
           <button class="coreHeader-offscreenToggle">
-            <i class="fa fa-bars"></i>
-            Menu
+            <i class="fa fa-bars" id="burgerIcon"></i>
+            <span>Menu</span>
           </button>
           <div class="tr-separator mobile-separator"></div>
           <div class="tr-item">
@@ -325,6 +326,7 @@
           <a href="#" class="categoryHeader-navigationLink">Household</a>
           <a href="#" class="categoryHeader-navigationLink">Lunch box</a>
         </nav>
+        <div class="cat-masking-o"></div>
         <div class="responsive-cat">
           <button class="responsive-cat-button">
            <h3>
@@ -337,7 +339,7 @@
               <nav class="menu-items">
                 <ul class="categoriesNavigation-list ">
                   <li class="ng-star-inserted">
-                    <a href="javascript:void(0)" onclick="openNav(event, 'special')" class="categoriesNavigation-link is_special">
+                    <a href="#" class="categoriesNavigation-link is_special">
                       <span class="categoriesNavigation-linkText">
                         Specials
                         <i class="fa fa-angle-right"></i>
@@ -554,7 +556,39 @@
         </div>
       </div>
     </nav>
-
+    <div class="delivery">
+      <div class="container-xl h100">
+        <div class="header-fulfilment__container">
+          <button class="header-fulfilment__section">
+            <div class="header-fulfilment__section-content">
+              <i class="fa fa-truck header-fulfilment__icon"></i>
+              <div class="header-fulfilment__section-message">
+                <span class="header-fulfilment__heading">Delivery to:</span>
+                <span class="header-fulfilment__active-message">Set your Delivery address</span>
+              </div>
+            </div>
+            <div class="header-fulfilment__section-arrow">
+              <span>Choose</span>
+              <i class="fa fa-angle-right"></i>
+            </div>
+          </button>
+          <div class="header-fulfilment__divider"></div>
+          <button class="header-fulfilment__section">
+            <div class="header-fulfilment__section-content">
+              <i class="fa fa-clock-o header-fulfilment__icon"></i>
+              <div class="header-fulfilment__section-message">
+                <span class="header-fulfilment__heading">When suits?:</span>
+                <span class="header-fulfilment__active-message">Available items may change</span>
+              </div>
+            </div>
+            <div class="header-fulfilment__section-arrow">
+              <span>Choose</span>
+              <i class="fa fa-angle-right"></i>
+            </div>
+          </button>
+        </div>
+      </div>
+    </div>
   </header>
 
 

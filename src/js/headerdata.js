@@ -4,8 +4,6 @@ const searchbtn = document.querySelector('.searchbtn');
 const inputTime = document.querySelector('.input-times');
 const rescatMenu = document.querySelector('.responsive-cat-menu');
 
-
-
 if(searchInp.addEventListener) {
 	searchInp.addEventListener('mouseup', searchBtnFun);
 } else if(searchInp.attachEvent) {
@@ -181,6 +179,7 @@ if(cartBtnMobiel.addEventListener) {
 function drawerFun() {
 	closeSideNav();
 	closerescatMenu();
+	burgerFix();
 	cartDrawer.classList.add('is_open');
 	masking.classList.add('is_open');
 }
@@ -231,6 +230,9 @@ const researchbtn = document.querySelector('.responsive-searchbtn');
 const resForm = document.querySelector('.headerSearch-searchWrapper-mobiles');
 
 researchbtn.onclick = function() {
+	closerescatMenu();
+	closeSideNav();
+	burgerSbtn();
 	resForm.classList.toggle('is_open');
 	this.classList.toggle('is_open');
 	searchInp.value = '';
@@ -245,9 +247,11 @@ document.onclick = function(e) {
 
 // reponsive categories
 const rescatbtn = document.querySelector('.responsive-cat-button');
+const catMasking = document.querySelector('.cat-masking-o');
 
 rescatbtn.onclick = function() {
 	rescatMenu.classList.toggle('is_open');
+	catMasking.classList.toggle('is_open');
 	const dicon = this.lastElementChild;
 	if(dicon.classList.contains('fa-angle-down')) {
 		dicon.classList.replace('fa-angle-down', 'fa-angle-up');
@@ -259,6 +263,7 @@ rescatbtn.onclick = function() {
 
 function closerescatMenu() {
 	rescatMenu.classList.remove('is_open');
+	catMasking.classList.remove('is_open');
 }
 
 
@@ -266,18 +271,53 @@ function closerescatMenu() {
 const sidenav = document.querySelector('.sidenav');
 const burger = document.querySelector('.coreHeader-offscreenToggle');
 const sideMasking = document.querySelector('.sidenav-masking');
+const bars = burger.firstElementChild;
+const barsText = burger.lastElementChild;
+
+
 
 burger.onclick = function() {
 	sidenav.classList.toggle('is_open');
 	sideMasking.classList.toggle('is_open');
+	const bars = this.firstElementChild;
+	const barsText = this.lastElementChild;
+	burgerFix();
+	closerescatMenu();
+
 }
+
+function burgerSbtn() {
+	if(bars.classList.contains('fa-times')) {
+		bars.classList.replace('fa-times', 'fa-bars');
+		barsText.innerHTML = 'Menu'
+	} else {
+		bars.classList.replace('fa-bars', 'fa-bars');
+		barsText.innerHTML = 'Menu';
+	}
+}
+
+function burgerFix() {
+	if(bars.classList.contains('fa-bars')) {
+		bars.classList.replace('fa-bars', 'fa-times');
+		barsText.innerHTML = 'Close'
+	} else {
+		bars.classList.replace('fa-times', 'fa-bars');
+		barsText.innerHTML = 'Menu';
+	}
+}
+
 
 window.onclick = function(e) {
 	if(e.target.classList.contains('sidenav-masking')) {
 		closeSideNav();
+		burgerFix();
+		closerescatMenu();
 	}
 	if(e.target.classList.contains('masking')) {
 		hideOrderSmry();
+		burgerFix();
+	}
+	if(e.target == catMasking) {
 		closerescatMenu();
 	}
 

@@ -147,6 +147,10 @@ img {
   .container {
     max-width: 540px;
   }
+  .container-xl {
+    padding-right: 1px;
+    padding-left: 1px;
+  }
 }
 
 @media (min-width: 768px) {
