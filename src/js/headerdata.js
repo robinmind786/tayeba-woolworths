@@ -230,12 +230,11 @@ if (window.matchMedia("(max-width: 600px)").matches) {
 const researchbtn = document.querySelector('.responsive-searchbtn');
 const resForm = document.querySelector('.headerSearch-searchWrapper-mobiles');
 
-researchbtn.addEventListener('click', function() {
+researchbtn.onclick = function() {
 	resForm.classList.toggle('is_open');
 	this.classList.toggle('is_open');
 	searchInp.value = '';
-});
-
+}
 
 document.onclick = function(e) {
 	const xtar = e.target.id;
