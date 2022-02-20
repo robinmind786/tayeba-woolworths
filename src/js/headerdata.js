@@ -179,7 +179,7 @@ if(cartBtnMobiel.addEventListener) {
 function drawerFun() {
 	closeSideNav();
 	closerescatMenu();
-	burgerFix();
+	burgerSbtn();
 	cartDrawer.classList.add('is_open');
 	masking.classList.add('is_open');
 }
@@ -310,12 +310,12 @@ function burgerFix() {
 window.onclick = function(e) {
 	if(e.target.classList.contains('sidenav-masking')) {
 		closeSideNav();
-		burgerFix();
+		burgerSbtn();
 		closerescatMenu();
 	}
 	if(e.target.classList.contains('masking')) {
 		hideOrderSmry();
-		burgerFix();
+		burgerSbtn();
 	}
 	if(e.target == catMasking) {
 		closerescatMenu();
