@@ -135,7 +135,7 @@ img {
 }
 
 /*container unit*/
-.container, .container-xl {
+.container, .container-xl, .container-xll {
   width: 100%;
   padding-right: 15px;
   padding-left: 15px;
@@ -170,6 +170,9 @@ img {
   .container {
     max-width: 1320px;
   }
+  .container-xll {
+    max-width: 1200px;
+  }
 }
 
 .row {
@@ -188,7 +191,7 @@ img {
     clear: both;
 }
 
-.item4, .item5 {
+.footer-col, .item3 {
   dposition: relative;
   width: 100%;
   min-height: 1px;
@@ -197,34 +200,77 @@ img {
 }
 
 
-@media only screen and (max-width: 600px) {
 
+@media only screen and (max-width: 600px) {
+  .footer-col {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
 }
 
 @media only screen and (min-width: 600px) {
+  .footer-col {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
 
+  .item3 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
 }
 
 @media only screen and (min-width: 768px) {
+  .footer-col {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
 
+  .item3 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
 }
 
 @media only screen and (min-width: 992px) {
+  .footer-col {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
 
+  .item3 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 33.333333333%;
+    flex: 0 0 33.333333333%;
+    max-width: 33.333333333%;
+  }
 }
 
 @media only screen and (min-width: 1200px) {
-  .item4 {
+  .footer-col {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 25%;
     flex: 0 0 25%;
     max-width: 25%;
   }
-  .item5 {
+
+  .item3 {
     -webkit-box-flex: 0;
-    -ms-flex: 0 0 20%;
-    flex: 0 0 20%;
-    max-width: 20%;
+    -ms-flex: 0 0 33.333333333%;
+    flex: 0 0 33.333333333%;
+    max-width: 33.333333333%;
   }
 
 }

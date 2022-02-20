@@ -1,3 +1,126 @@
-.xdhfdlk {
-	
+.main {
+	margin: 2rem 0;
+}
+
+.section {
+	padding-top: 8px;
+    padding-bottom: 32px;
+
+}
+
+.section-clr {
+	background-color: #fff;
+}
+
+.section-header {
+	text-align: center;
+	margin: 32px 8px;
+}
+
+.cmp-copy__title {
+	    font-size: 28px;
+    line-height: 32px;
+    margin-bottom: 16px;
+    color: #3A474E;
+	font-weight: 600;
+    
+}
+
+.section-header p {
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.item-content {
+    border-radius: 6px;
+    overflow: hidden;
+    position: relative;
+    -webkit-box-shadow: 0 4px 8px 0 rgb(58 71 78 / 10%);
+    box-shadow: 0 4px 8px 0 rgb(58 71 78 / 10%);
+    -webkit-transition: all .75s ease-out;
+    transition: all .75s ease-out;
+    text-align: center;
+    width: auto;
+    margin: 16px auto;
+    background: #fff;
+}
+
+.item-content:hover {
+	-webkit-box-shadow: 0 8px 12px 0 rgb(58 71 78 / 20%);
+    box-shadow: 0 8px 12px 0 rgb(58 71 78 / 20%);
+    -webkit-transition: all .35s ease-out;
+    transition: all .35s ease-out;
+    cursor: pointer;
+}
+
+.item-img {
+	height: 256px;
+	width: 100%;
+}
+
+.item-img img {
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+}
+
+.section-text-xl {
+	text-align: left;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    margin: 16px;
+    min-height: 72px;
+    font-size: 20px;
+    line-height: 24px;
+    color: #3a474e;
+    font-weight: 600;
+}
+
+.sectionbtn {
+	margin-bottom: 24px;
+	min-width: 104px;
+    max-width: 344px;
+    height: 40px;
+    font-size: 14px;
+    line-height: 39px;
+    padding: 0 24px;
+    border: 0;
+    background-color: #125430;
+    color: #fff;
+    display: inline-block;
+    vertical-align: middle;
+    border-radius: 28px;
+    font-family: "Fresh Sans Medium",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+}
+
+.sectionbtn i {
+    font-size: 15px;
+    display: inline-block;
+    width: 4px;
+    height: 8px;
+    margin-left: 8px;
+    font-weight: bold;
+}
+
+.sectionbtn:hover {
+	color: #fff;
+    background-color: #0d3e23;
+    text-decoration: none;
+    -webkit-transition: background-color 350ms ease-out,border 350ms ease-out;
+    -o-transition: background-color 350ms ease-out,border 350ms ease-out;
+    transition: background-color 350ms ease-out,border 350ms ease-out;
+}
+
+.section-cover-link {
+	position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }

@@ -1,0 +1,5 @@
+.mySlides img {
+	/*background: url('/src/images/sliders/01.jpg');*/
+	object-fit: cover;
+	max-height: 400px;
+}
