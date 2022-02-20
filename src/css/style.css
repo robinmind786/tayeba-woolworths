@@ -1424,6 +1424,9 @@ body {
     .autocomplete-dropdownWrapper {
         top: 6px;
     }
+    .sidenav-masking {
+        top: 100px;
+    }
 
 }
 
