@@ -1,5 +1,105 @@
+.slideshow-container {
+	position: relative;
+	width: 100%;
+}
+
+.mySlides {
+	display: none;
+}
+
+.mySlides {
+	height: 400px;
+}
+
 .mySlides img {
-	/*background: url('/src/images/sliders/01.jpg');*/
 	object-fit: cover;
-	max-height: 400px;
+	vertical-align: middle;
+	height: 100%;
+}
+
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 1rem 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.dot.active {
+	background-color: #717171;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+
+.quick-access-nav-item-link {
+	background-color: #fff;
+	display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    -webkit-box-shadow: 2px 2px 5px rgb(0 0 0 / 25%);
+    box-shadow: 2px 2px 5px rgb(0 0 0 / 25%);
+    border-radius: 4px;
+    margin: 8px 0;
+    width: 100%;
+    -webkit-animation: slideIn 350ms backwards;
+    animation: slideIn 350ms backwards;
+    transition: box-shadow 350ms ease-out,border 350ms ease-out;
+    min-height: 1px;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.quick-access-nav-item-link:hover {
+	text-decoration: unset;
+	-webkit-box-shadow: 4px 4px 8px rgb(0 0 0 / 30%);
+    box-shadow: 4px 4px 8px rgb(0 0 0 / 30%);
+    transition: box-shadow 350ms ease-out,border 350ms ease-out;
+
+}
+
+.quick-access-nav-item-content {
+	border-radius: 4px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.tile-header-image {
+	height: 64px;
+    width: 64px;
+    -webkit-box-flex: 0;
+    display: flex;
+}
+
+.tile-header-image img {
+    margin: auto;
+    position: relative;
+}
+
+.quick-access-nav-item-text h3 {
+	font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 0;
+    text-align: left;
+    text-decoration: none;
+    font-weight: 500;
 }

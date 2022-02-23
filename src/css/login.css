@@ -1,0 +1,147 @@
+
+
+.secureLogin {
+	margin: 60px auto;
+	max-width: 700px;
+    background-color: #fff;
+}
+
+.secureLogin-padding {
+	padding: 55px 90px;
+}
+
+.loginForm-heading {
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    font-size: 38px;
+    line-height: 40px;
+    font-weight: 600;
+}
+
+.loginForm-userIcon {
+    width: 45px;
+    font-size: 22px;
+    text-align: center;
+    line-height: 40px;
+    border: 3px solid #3a474e;
+    border-radius: 50%;
+    display: inline-block;
+    height: 45px;
+    margin-right: 15px;
+}
+
+.loginForm-label {
+	font-family: Fresh Sans Medium,Helvetica,Arial,sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+a {
+    color: #178841;
+    text-decoration: none;
+}
+
+.loginForm {
+	margin-top: 20px;
+}
+
+.ng-invalid {
+	margin: 0;
+}
+
+.email-textbox {
+	display: inline-block;
+    font-size: 16px;
+    margin-right: 16px;
+    margin-top: 0;
+    max-width: 584px;
+    min-width: 224px;
+    position: relative;
+    width: 100%;
+}
+
+.input-with-label {
+    background-color: #f5f5f5;
+    border: 1px solid #c3c7c9;
+    box-sizing: border-box;
+    height: 48px;
+    padding: 0 16px;
+    width: 100%;
+    padding-right: 38px;
+}
+
+input[type=password] {
+	margin-top: 10px;
+}
+
+.loginForm-forgotPassword {
+	display: block;
+    margin: 5px 0;
+    background: none;
+    border: none;
+    font-family: Fresh Sans Medium,Helvetica,Arial,sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 0;
+}
+
+
+.loginForm-rememberMe {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    font-family: Fresh Sans Medium,Helvetica,Arial,sans-serif;
+    color: #178841;
+}
+
+.loginbtn {
+	padding-left: 24px;
+    padding-right: 24px;
+	height: 40px;
+    min-width: 104px;
+	border: none;
+    border-radius: 100px;
+    cursor: pointer;
+    font-family: Fresh Sans Medium,Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    transition: background-color .15s,color .15s;
+    line-height: 16px;
+    background-color: #126c34;
+    border-color: #126c34;
+    color: #fff;
+}
+
+.secureLogin-separator {
+	width: 100%;
+    border-top: 1px solid #dedfdc;
+    border-bottom: none;
+    margin: 10px 0;
+}
+
+.secureLogin-signUp {
+	display: block;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    background: none;
+    border: none;
+    font-family: Fresh Sans Medium,Helvetica,Arial,sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 0;
+}
+
+.secureLogin-signUp span {
+	color: #3a474e;
+}
+
+
+@media (max-width: 768px) {
+  .secureLogin-padding {
+    padding: 3rem 1rem;
+  }
+  .secureLogin {
+    margin: 0 auto;
+  }
+}
